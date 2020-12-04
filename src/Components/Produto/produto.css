@@ -1,0 +1,194 @@
+/* PARA TODAS AS PÁGINAS */
+
+* {
+    /* overflow-x: hidden; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 20px 0px 10px 20px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+
+/* #principal {
+    margin-left: 100px;
+} */
+
+
+/* #menu {
+    background-color: red !important;
+    font-size: 22px !important;
+} */
+
+
+/*  .menu { 
+     background-color: red;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8px; 
+} */
+
+
+/* .menu a {
+    color: white;
+    text-decoration: none;
+} */
+
+
+/* PÁGINA DE PRODUTOS */
+
+
+.categorias {
+    width: 20%;
+    padding: 0px;
+}
+
+.categorias li {
+    font-size: 16px;
+    margin: 0px;
+    list-style-type: square;
+}
+
+.categorias li:hover {
+    cursor: pointer;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.container {
+    display: flex;
+}
+
+.box_produtos {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* hr {
+    width: 100%;
+} */
+
+.box_imagens {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.descricao {
+    font-size: 13px;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.descricao2 {
+    font-size: 15px;
+    text-decoration: line-through;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.preco {
+    color: red;
+    font-size: 18px;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* PÁGINA DAS LOJAS*/
+
+
+/* #lojas {
+    margin: 0px;
+    padding-top: 0;
+    border: 0;
+} */
+
+#unidades {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin-top: 20px;
+}
+
+
+/* PÁGINA FALE CONOSCO */
+
+
+/* .contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 30px;
+} */
+
+.comunicacao {
+    width: 50%;
+    text-align: center;
+}
+
+.comunicacao p {
+    font-size: 20px;
+}
+
+
+/* form {
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-top: 20px;
+} */
+
+
+/* input,
+textarea {
+    width: 400px;
+} */
+
+
+/* RODAPÉ PARA GERAL*/
+
+#rodape {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+#formas_pagamento {
+    /* color: red; */
+    font-weight: bold;
+}
+
+.assinatura {
+    font-size: 14px;
+}
