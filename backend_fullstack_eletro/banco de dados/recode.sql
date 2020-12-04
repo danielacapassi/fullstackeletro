@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Dez-2020 às 02:00
+-- Tempo de geração: 04-Dez-2020 às 16:17
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -28,15 +28,22 @@ USE `recode`;
 --
 -- Estrutura da tabela `cliente`
 --
+-- Criação: 04-Dez-2020 às 14:20
+-- Última actualização: 04-Dez-2020 às 14:24
+--
 
 DROP TABLE IF EXISTS `cliente`;
 CREATE TABLE `cliente` (
   `id_cliente` varchar(5) NOT NULL,
-  `nome` varchar(20) NOT NULL,
-  `cep` varchar(230) NOT NULL,
+  `nome` varchar(30) NOT NULL,
+  `cep` varchar(20) NOT NULL,
   `numero` varchar(45) NOT NULL,
   `telefone` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELACIONAMENTOS PARA TABELAS `cliente`:
+--
 
 --
 -- Extraindo dados da tabela `cliente`
@@ -45,12 +52,15 @@ CREATE TABLE `cliente` (
 INSERT INTO `cliente` (`id_cliente`, `nome`, `cep`, `numero`, `telefone`) VALUES
 ('1', 'Luiz', '04675-060', '23', '44534344'),
 ('2', 'Joao Paulo Soares', '04802170', '456', '987868688'),
-('3', 'Daniela', '04841-150', '491', '(11) 2345-6780');
+('3', 'Daniela Capassi Moreira', '04841-150', '491', '(11) 2345-6780');
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `comentarios`
+--
+-- Criação: 30-Out-2020 às 19:11
+-- Última actualização: 04-Dez-2020 às 14:28
 --
 
 DROP TABLE IF EXISTS `comentarios`;
@@ -60,6 +70,10 @@ CREATE TABLE `comentarios` (
   `msg` varchar(300) DEFAULT NULL,
   `data` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELACIONAMENTOS PARA TABELAS `comentarios`:
+--
 
 --
 -- Extraindo dados da tabela `comentarios`
@@ -88,12 +102,17 @@ INSERT INTO `comentarios` (`id`, `nome`, `msg`, `data`) VALUES
 (27, '', '', '2020-12-02 13:36:21'),
 (28, 'daniela', 'teste', '2020-12-02 15:58:04'),
 (29, 'diego', 'teste', '2020-12-02 16:59:12'),
-(30, 'Daniela', 'Teste!', '2020-12-03 21:59:28');
+(30, 'Daniela', 'Teste!', '2020-12-03 21:59:28'),
+(31, 'Daniela', 'Teste de Backend', '2020-12-03 22:27:16'),
+(32, 'Daniela', 'Teste2', '2020-12-03 22:34:49'),
+(33, 'joão das couve', 'teste', '2020-12-04 11:28:44');
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `pedidos`
+--
+-- Criação: 03-Dez-2020 às 23:30
 --
 
 DROP TABLE IF EXISTS `pedidos`;
@@ -103,6 +122,10 @@ CREATE TABLE `pedidos` (
   `idproduto` int(11) NOT NULL,
   `data` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELACIONAMENTOS PARA TABELAS `pedidos`:
+--
 
 --
 -- Extraindo dados da tabela `pedidos`
@@ -123,6 +146,8 @@ INSERT INTO `pedidos` (`idpedido`, `id_cliente`, `idproduto`, `data`) VALUES
 --
 -- Estrutura da tabela `produtos`
 --
+-- Criação: 24-Out-2020 às 00:25
+--
 
 DROP TABLE IF EXISTS `produtos`;
 CREATE TABLE `produtos` (
@@ -133,6 +158,10 @@ CREATE TABLE `produtos` (
   `precofinal` decimal(8,2) DEFAULT NULL,
   `imagem` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELACIONAMENTOS PARA TABELAS `produtos`:
+--
 
 --
 -- Extraindo dados da tabela `produtos`
@@ -189,7 +218,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
