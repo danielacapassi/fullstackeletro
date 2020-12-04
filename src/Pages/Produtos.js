@@ -44,12 +44,12 @@ export default function Produtos() {
   }, [filtrar]);
 
   return (
-    <div>
-      <h1>Nossos Produtos:</h1>
+    <div className="col-sm-12 mx-auto">
+      <h1><b>Nossos Produtos:</b></h1>
       {produtos && (
         <ListarCategoria funcaoFiltro={filtro} listaProdutos={produtos} />
       )}
-
+   <br/> <br/>
       <Container>
         <Row>
           {produtosFiltrados &&

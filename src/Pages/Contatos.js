@@ -1,6 +1,4 @@
 import {
-  Card,
-  CardGroup,
   Form,
   Button,
   ButtonGroup,
@@ -24,8 +22,8 @@ export default function Contatos(props) {
   };
 
   return (
-    <div>
-      <h1> Nossos Contatos:</h1>
+    <div style={{padding:"0px 50px 4vh 50px"}} className="col-sm-12 mx-auto">
+      <h1><b> Nossos Contatos:</b></h1>
 
       <Row className="col-lg-6 col-sm-10 mx-auto">
         <img src={emailImg} />
@@ -60,6 +58,7 @@ export default function Contatos(props) {
             }}
             value={mensagem}
             as="textarea"
+            placeholder="Nome"
             rows={6}
           />
         </Form.Group>

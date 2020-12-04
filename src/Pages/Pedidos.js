@@ -16,21 +16,24 @@ let idCliente = 3;
     }, []);
 
     return (
-        <>
-        <h1>{`Histórico de pedidos: ${pedidos && pedidos[0].nome}`}</h1> 
+        <div className="col-sm-12 mx-auto">
+        <h1><b>{`Histórico de Pedidos do Cliente: ${pedidos && pedidos[0].nome}`}</b></h1> 
+        
 
         {pedidos && pedidos.map(item => (
-            <>
+            <div>
         <ListGroup vertical className="col-lg-6 col-sm-10 mx-auto">
-        <ListGroup.Item variant="danger">{`Código Pedido: ${item.idpedido}`}</ListGroup.Item>
-        <ListGroup.Item variant="danger">{`Descrição: ${item.descricao}`}</ListGroup.Item>
+        <ListGroup.Item variant="danger">{`Código do Pedido: ${item.idpedido}`}</ListGroup.Item>
+        <ListGroup.Item variant="danger">{`Data do Pedido: ${item.data}`}</ListGroup.Item>
+        <ListGroup.Item variant="danger">{`Descrição do Produto: ${item.descricao}`}</ListGroup.Item>
         <ListGroup.Item variant="danger">{`Preço: ${item.precofinal}`}</ListGroup.Item>
+
         </ListGroup> 
         <br></br>
-        </>
+        </div>
          ))
         }
-        </>
+        </div>
     );
 }
 
