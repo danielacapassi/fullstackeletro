@@ -1,8 +1,8 @@
-import {ListGroup} from 'react-bootstrap'
+import {Container, Row, ListGroup} from 'react-bootstrap'
 
 
  function ListarCategoria(props) {
-    
+
 
     let eventoClick = (event => {
         props.funcaoFiltro(event.target.innerText)
@@ -27,8 +27,10 @@ import {ListGroup} from 'react-bootstrap'
 
         listaCategorias[0].quantidade++;
 
+
     })
 
+    // return(<div>         {listaCategorias && listaCategorias.map(entry => <><span onClick={eventoClick}>{`${entry.nome}`}</span><span>{` (${entry.quantidade})`}</span><br/></>)}</div>)
     return(<ListGroup horizontal className="col-lg-6 col-sm-10 mx-auto">         {listaCategorias && listaCategorias.map(entry => <><ListGroup.Item variant="danger" onClick={eventoClick}>{`${entry.nome}`}</ListGroup.Item><br/></>)}</ListGroup>)
 
  }
